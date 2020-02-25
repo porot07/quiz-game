@@ -1,16 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="734bab5d-6244-44c4-a0b0-0149ba106901" name="Default Changelist" comment="" />
+    <list default="true" id="734bab5d-6244-44c4-a0b0-0149ba106901" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Finally.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ListQuestion.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/random.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/drawing.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/img/external-content.duckduckgo.com.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/other/questions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/template.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.config.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Викторина" />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1Y4kPGwVEVgZpYE1jf2Q0vgKVpH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -19,11 +42,17 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/buttons" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -35,7 +64,19 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1582209228451</updated>
-      <workItem from="1582209241066" duration="1099000" />
+      <workItem from="1582209241066" duration="1697000" />
+      <workItem from="1582269908840" duration="203000" />
+      <workItem from="1582270201716" duration="1967000" />
+      <workItem from="1582279361012" duration="17356000" />
+      <workItem from="1582345290663" duration="4103000" />
+      <workItem from="1582357814126" duration="20310000" />
+      <workItem from="1582387843650" duration="3592000" />
+      <workItem from="1582402036569" duration="595000" />
+      <workItem from="1582451664660" duration="1177000" />
+      <workItem from="1582528672788" duration="12186000" />
+      <workItem from="1582541759900" duration="17945000" />
+      <workItem from="1582605425572" duration="3337000" />
+      <workItem from="1582618844139" duration="4048000" />
     </task>
     <servers />
   </component>
@@ -43,21 +84,42 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1582209577738">
+    <state x="423" y="158" width="426" height="484" key="FileChooserDialogImpl" timestamp="1582530817522">
+      <screen x="0" y="25" width="1280" height="751" />
+    </state>
+    <state x="423" y="158" width="426" height="484" key="FileChooserDialogImpl/0.25.1280.750@0.25.1280.750" timestamp="1582388347597" />
+    <state x="423" y="158" key="FileChooserDialogImpl/0.25.1280.751@0.25.1280.751" timestamp="1582530817522" />
+    <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1582210945011">
       <screen x="0" y="25" width="1280" height="750" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.bottom/0.25.1280.750@0.25.1280.750" timestamp="1582209577738" />
-    <state width="1259" height="156" key="GridCell.Tab.0.center" timestamp="1582209577736">
+    <state width="1259" height="156" key="GridCell.Tab.0.bottom/0.25.1280.750@0.25.1280.750" timestamp="1582210945011" />
+    <state width="1259" height="156" key="GridCell.Tab.0.center" timestamp="1582210945010">
       <screen x="0" y="25" width="1280" height="750" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.center/0.25.1280.750@0.25.1280.750" timestamp="1582209577736" />
-    <state width="1259" height="156" key="GridCell.Tab.0.left" timestamp="1582209577736">
+    <state width="1259" height="156" key="GridCell.Tab.0.center/0.25.1280.750@0.25.1280.750" timestamp="1582210945010" />
+    <state width="1259" height="156" key="GridCell.Tab.0.left" timestamp="1582210945005">
       <screen x="0" y="25" width="1280" height="750" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.left/0.25.1280.750@0.25.1280.750" timestamp="1582209577736" />
-    <state width="1259" height="156" key="GridCell.Tab.0.right" timestamp="1582209577737">
+    <state width="1259" height="156" key="GridCell.Tab.0.left/0.25.1280.750@0.25.1280.750" timestamp="1582210945005" />
+    <state width="1259" height="156" key="GridCell.Tab.0.right" timestamp="1582210945010">
       <screen x="0" y="25" width="1280" height="750" />
     </state>
-    <state width="1259" height="156" key="GridCell.Tab.0.right/0.25.1280.750@0.25.1280.750" timestamp="1582209577737" />
+    <state width="1259" height="156" key="GridCell.Tab.0.right/0.25.1280.750@0.25.1280.750" timestamp="1582210945010" />
+    <state x="129" y="35" key="SettingsEditor" timestamp="1582377066005">
+      <screen x="0" y="25" width="1280" height="750" />
+    </state>
+    <state x="129" y="35" key="SettingsEditor/0.25.1280.750@0.25.1280.750" timestamp="1582377066005" />
+    <state x="416" y="316" width="440" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1582540023591">
+      <screen x="0" y="25" width="1280" height="751" />
+    </state>
+    <state x="416" y="316" width="440" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.25.1280.751@0.25.1280.751" timestamp="1582540023578" />
+    <state x="300" y="177" key="run.anything.popup" timestamp="1582361224286">
+      <screen x="0" y="25" width="1280" height="750" />
+    </state>
+    <state x="300" y="177" key="run.anything.popup/0.25.1280.750@0.25.1280.750" timestamp="1582361224286" />
+    <state x="300" y="96" width="672" height="678" key="search.everywhere.popup" timestamp="1582348211199">
+      <screen x="0" y="25" width="1280" height="750" />
+    </state>
+    <state x="300" y="96" width="672" height="678" key="search.everywhere.popup/0.25.1280.750@0.25.1280.750" timestamp="1582348211199" />
   </component>
 </project>

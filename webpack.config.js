@@ -15,7 +15,13 @@ module.exports = {
     rules: [
       { test: /\.s[ac]ss$/i, use: ['style-loader', 'css-loader', 'sass-loader'] },
       { test: /\.css$/, use: ['style-loader', 'css-loader'] },
-      { test: /\.jsx$/, use: ['babel-loader'] },
+      { test: /\.jsx?$/, use: ['babel-loader'] },
+      {
+        test: /\.(png|svg|jpg|gif)$/i,
+        use: {
+          loader: 'file-loader',
+        },
+      },
     ],
   },
   resolve: {

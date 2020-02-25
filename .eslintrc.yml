@@ -12,5 +12,5 @@ rules:
   import/no-unresolved: 0
   import/extensions: 0
   no-console: 0
-  react/props-types: 0
+  react/prop-types: 0
   react/display-name: 0
