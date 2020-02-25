@@ -1,7 +1,6 @@
 import React from 'react';
 
-const Finally = (props) => {
-  const { correctAnswers } = props;
+const Finally = ({ correctAnswers }) => {
   console.log(correctAnswers);
   return (
     <div className="finalizer">
