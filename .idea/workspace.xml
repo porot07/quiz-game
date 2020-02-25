@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="734bab5d-6244-44c4-a0b0-0149ba106901" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ListQuestion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListQuestion.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +27,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/buttons" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/reactide-master" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,7 +61,8 @@
       <workItem from="1582528672788" duration="12186000" />
       <workItem from="1582541759900" duration="17945000" />
       <workItem from="1582605425572" duration="3337000" />
-      <workItem from="1582618844139" duration="4597000" />
+      <workItem from="1582618844139" duration="9221000" />
+      <workItem from="1582629023069" duration="620000" />
     </task>
     <servers />
   </component>
@@ -68,11 +70,11 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="423" y="158" width="426" height="484" key="FileChooserDialogImpl" timestamp="1582530817522">
+    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl" timestamp="1582629114462">
       <screen x="0" y="25" width="1280" height="751" />
     </state>
     <state x="423" y="158" width="426" height="484" key="FileChooserDialogImpl/0.25.1280.750@0.25.1280.750" timestamp="1582388347597" />
-    <state x="423" y="158" key="FileChooserDialogImpl/0.25.1280.751@0.25.1280.751" timestamp="1582530817522" />
+    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl/0.25.1280.751@0.25.1280.751" timestamp="1582629114462" />
     <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1582210945011">
       <screen x="0" y="25" width="1280" height="750" />
     </state>

@@ -5,8 +5,8 @@ const ListQuestion = (props) => {
   return (
     <div className="list-container">
       <header>
-        <p className="number-question">Вопрос №{question.id}</p>
-        <p className="logotext">Узнай на что ты способен!</p>
+        <p>Вопрос №{question.id}</p>
+        <p>Узнай на что ты способен!</p>
       </header>
       <p className="question"><span>{question.question}</span></p>
       <form className="radio-container" onSubmit={handleSubmit}>
