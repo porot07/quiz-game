@@ -1,12 +1,18 @@
 parser: babel-eslint
 
 extends:
-  - 'airbnb-base'
+  - 'eslint:recommended'
+  - 'plugin:import/errors'
+  - 'plugin:import/warnings'
   - 'plugin:react/recommended'
 
 env:
   node: true
   browser: true
+
+settings:
+  import/order: 'eslint-plugin-import'
+
 
 rules:
   import/no-unresolved: 0

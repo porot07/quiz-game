@@ -5,141 +5,132 @@ body {
   background-size: 1000px;
   width: 100vw;
   height: 100vh;
-  //padding: 0;
   margin: 0;
-}
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  //align-content: center;
-  text-align: center;
-}
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
-.finalizer {
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
-  color: orange;
-  background: rgba(0,0,0,0.6);
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-}
+  .results {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    color: orange;
+    background: rgba(0,0,0,0.6);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    h1 {
+      background: black;
+      width: 33%;
+      height: 150px;
+      border: 2px solid yellow;
+      border-radius: 50px;
+      line-height: 150px;
+    }
+  }
 
-.finalizer h1 {
-  background: black;
-  width: 33%;
-  height: 150px;
-  border: 2px solid yellow;
-  border-radius: 50px;
-  line-height: 150px;
-}
-header {
-  display: flex;
-  flex-direction: column-reverse;
-  //justify-content: space-between;
-  align-content: space-between;
-  width: 75%;
-  border-radius: 50px;
-  background: #FFA500a0;
-  margin: 50px 0;
-}
+  .list-container {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
 
-header p {
-  font-weight: 800;
-  font-family: "Droid Sans Arabic", sans-serif;
-  font-size: 42px;
-  padding: 0;
-  margin: 0;
-  line-height: 50px;
-}
+    header {
+      display: flex;
+      flex-direction: column-reverse;
+      //justify-content: space-between;
+      align-content: space-between;
+      width: 75%;
+      border-radius: 50px;
+      background: #FFA500a0;
+      margin: 50px 0;
+      p {
+        font-weight: 800;
+        font-family: "Droid Sans Arabic", sans-serif;
+        font-size: 42px;
+        padding: 0;
+        margin: 0;
+        line-height: 50px;
+      }
+    }
 
-.list-container {
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
-  justify-content: center;
-  width: 100vw;
-}
+    .question {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0, 0, 0, .8);
+      color: orangered;
+      border: 2px dashed black;
+      border-radius: 30px;
+      width: 75%;
+      height: 200px;
+      font-family: cursive, serif;
+      font-size: 36px;
+      margin: 0;
+    }
 
-.radio-container {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
-  align-content: center;
-  width: 75%;
-}
+    .radio-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: flex-end;
+      align-content: center;
+      width: 75%;
 
-.question {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgba(0, 0, 0, .8);
-  color: orangered;
-  border: 2px dashed black;
-  border-radius: 30px;
-  width: 75%;
-  height: 200px;
-  font-family: cursive, serif;
-  font-size: 36px;
-  margin: 0;
-}
+      .variant-A, .variant-B, .variant-C, .variant-D {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        position: relative;
 
-#variant-A:checked + label, #variant-B:checked + label, #variant-C:checked + label, #variant-D:checked + label {
-  background: green;
-}
+        #variant-A:checked + label, #variant-B:checked + label, #variant-C:checked + label, #variant-D:checked + label {
+          background: green;
+        }
 
-button {
-  width: 25%;
-  color: orangered;
-  font-size: 22px;
-  background: black;
-  cursor: pointer;
-  align-self: flex-end;
-}
+        input[type="radio"] {
+          justify-content: center;
+          position: absolute;
+          z-index: -1;
+        }
+        label {
+          background: black;
+          color: white;
+          display: inline-block;
+          width: 100%;
+          height: 50px;
+          border: 3px solid #e26d1b;
+          border-radius: 50px;
+          font-family: cursive, serif;
+          font-size: 18px;
+          span {
+            line-height: 50px;
+          }
+        }
 
-label {
-  background: black;
-  color: white;
-  display: inline-block;
-  width: 100%;
-  height: 50px;
-  border: 3px solid #e26d1b;
-  border-radius: 50px;
-  font-family: cursive, serif;
-  font-size: 18px;
-}
+        label:hover {
+          color: black;
+          background: greenyellow;
+          cursor: pointer;
+        }
+      }
 
-label span {
-  line-height: 50px;
+      button {
+        width: 25%;
+        color: orangered;
+        font-size: 22px;
+        background: black;
+        cursor: pointer;
+        align-self: flex-end;
+      }
+    }
+  }
 }
-
-label:hover {
-  color: black;
-  background: greenyellow;
-  cursor: pointer;
-}
-
-.variant-A, .variant-B, .variant-C, .variant-D {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
-  position: relative;
-}
-
-input[type="radio"] {
-  justify-content: center;
-  position: absolute;
-  z-index: -1;
-}
-
-//p.question span {
-//  display: inline-block;
-//}
 
 @media screen and (max-width: 768px) {
   header {
@@ -159,7 +150,9 @@ input[type="radio"] {
     width: 100%;
   }
 
-  .finalizer h1 {
-    width: 75%;
+  .results {
+    h1 {
+      width: 75%;
+    }
   }
 }

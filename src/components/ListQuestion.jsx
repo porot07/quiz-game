@@ -1,7 +1,6 @@
 import React from 'react';
 
-const ListQuestion = (props) => {
-  const { question, handleSubmit, handleClick } = props;
+const ListQuestion = ({ question, handleSubmit, handleClick }) => {
   return (
     <div className="list-container">
       <header>
