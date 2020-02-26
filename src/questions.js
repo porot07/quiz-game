@@ -2,221 +2,221 @@ export default [
   {
     id: 1,
     question: 'Сколько будет 2 + 2?',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: '4',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: '5',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: '2',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: '8',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 2,
     question: 'Пустыня в Африке',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Сахара',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Кызылкум',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Калахари',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Гоби',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 3,
     question: 'Зонтик был изобретен дважды: первый раз в Древнем Китае, второй в Англии. Чем отличался английский зонтик от китайского?',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Английский – от дождя, китайский – от солнца',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Английский - от солнца, китайский - от дождя',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Оба зонта от дождя',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Оба зонта от солнца',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 4,
     question: 'Как называется веревка с петлей на конце?',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Лассо',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Поводок',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Петля',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Игрушка',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 5,
     question: 'Ягода ярко-малинового цвета',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Малина',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Помидор',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Клубника',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Ежевика',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 6,
     question: 'Птица – символ мудрости',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Сова',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Ворон',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Воробей',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Петух',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 7,
     question: 'Подставка для микроскопа, фотоаппарата',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Штатив',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Селфи-палка',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Палка',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Акссесуар',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 8,
     question: 'Дикий предок собаки',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Волк',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Шакал',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Лиса',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Динозавр',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 9,
     question: 'Кот, прислуживающей Бабе-Яге',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Баюн',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Чеширский',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Домашний',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Уличный',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
   {
     id: 10,
     question: 'Стайка рыб',
-    answers: {
-      answerOne: {
+    answers: [
+      {
         value: 'Косяк',
-        isRight: 'correct',
+        correctValue: 'correct',
       },
-      answerTwo: {
+      {
         value: 'Рой',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerThree: {
+      {
         value: 'Орава',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-      answerFour: {
+      {
         value: 'Звено',
-        isRight: 'incorrect',
+        correctValue: 'incorrect',
       },
-    },
+    ],
   },
 ];

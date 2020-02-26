@@ -1,9 +1,7 @@
 parser: babel-eslint
 
 extends:
-  - 'eslint:recommended'
-  - 'plugin:import/errors'
-  - 'plugin:import/warnings'
+  - 'airbnb'
   - 'plugin:react/recommended'
 
 env:
@@ -20,3 +18,4 @@ rules:
   no-console: 0
   react/prop-types: 0
   react/display-name: 0
+  react/jsx-filename-extension: 0

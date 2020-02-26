@@ -6,132 +6,131 @@ body {
   width: 100vw;
   height: 100vh;
   margin: 0;
-  .container {
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.results {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  color: orange;
+  background: rgba(0,0,0,0.6);
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  h1 {
+    background: black;
+    width: 33%;
+    height: 150px;
+    border: 2px solid yellow;
+    border-radius: 50px;
+    line-height: 150px;
+  }
+}
+
+.list-container {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+
+  header {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    flex-direction: column-reverse;
+    //justify-content: space-between;
+    align-content: space-between;
+    width: 75%;
+    border-radius: 50px;
+    background: #FFA500a0;
+    margin: 50px 0;
+    p {
+      font-weight: 800;
+      font-family: "Droid Sans Arabic", sans-serif;
+      font-size: 42px;
+      padding: 0;
+      margin: 0;
+      line-height: 50px;
+    }
   }
 
-  .results {
+  .question {
     display: flex;
-    flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    color: orange;
-    background: rgba(0,0,0,0.6);
-    width: 100vw;
-    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    color: orangered;
+    border: 2px dashed black;
+    border-radius: 30px;
+    width: 75%;
+    height: 200px;
+    font-family: cursive, serif;
+    font-size: 36px;
     margin: 0;
-    h1 {
-      background: black;
-      width: 33%;
-      height: 150px;
-      border: 2px solid yellow;
-      border-radius: 50px;
-      line-height: 150px;
-    }
   }
 
-  .list-container {
+  .radio-container {
     display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    align-content: center;
+    width: 75%;
 
-    header {
-      display: flex;
-      flex-direction: column-reverse;
-      //justify-content: space-between;
-      align-content: space-between;
-      width: 75%;
-      border-radius: 50px;
-      background: #FFA500a0;
-      margin: 50px 0;
-      p {
-        font-weight: 800;
-        font-family: "Droid Sans Arabic", sans-serif;
-        font-size: 42px;
-        padding: 0;
-        margin: 0;
-        line-height: 50px;
-      }
-    }
-
-    .question {
+    .variant-0, .variant-1, .variant-2, .variant-3 {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: rgba(0, 0, 0, .8);
-      color: orangered;
-      border: 2px dashed black;
-      border-radius: 30px;
-      width: 75%;
-      height: 200px;
-      font-family: cursive, serif;
-      font-size: 36px;
-      margin: 0;
-    }
+      width: 50%;
+      position: relative;
 
-    .radio-container {
-      display: flex;
-      flex-flow: row wrap;
-      justify-content: flex-end;
-      align-content: center;
-      width: 75%;
+      #variant-0:checked + label, #variant-1:checked + label, #variant-2:checked + label, #variant-3:checked + label {
+        background: green;
+      }
 
-      .variant-A, .variant-B, .variant-C, .variant-D {
-        display: flex;
+      input[type="radio"] {
         justify-content: center;
-        align-items: center;
-        width: 50%;
-        position: relative;
-
-        #variant-A:checked + label, #variant-B:checked + label, #variant-C:checked + label, #variant-D:checked + label {
-          background: green;
-        }
-
-        input[type="radio"] {
-          justify-content: center;
-          position: absolute;
-          z-index: -1;
-        }
-        label {
-          background: black;
-          color: white;
-          display: inline-block;
-          width: 100%;
-          height: 50px;
-          border: 3px solid #e26d1b;
-          border-radius: 50px;
-          font-family: cursive, serif;
-          font-size: 18px;
-          span {
-            line-height: 50px;
-          }
-        }
-
-        label:hover {
+        position: absolute;
+        z-index: -1;
+      }
+      label {
+        background: black;
+        color: white;
+        display: inline-block;
+        width: 100%;
+        height: 50px;
+        border: 3px solid #e26d1b;
+        border-radius: 50px;
+        font-family: cursive, serif;
+        font-size: 18px;
+        &:hover {
           color: black;
           background: greenyellow;
           cursor: pointer;
         }
+        span {
+          line-height: 50px;
+        }
       }
+    }
 
-      button {
-        width: 25%;
-        color: orangered;
-        font-size: 22px;
-        background: black;
-        cursor: pointer;
-        align-self: flex-end;
-      }
+    button {
+      width: 25%;
+      color: orangered;
+      font-size: 22px;
+      background: black;
+      cursor: pointer;
+      align-self: flex-end;
     }
   }
 }
-
 @media screen and (max-width: 768px) {
   header {
     display: flex;

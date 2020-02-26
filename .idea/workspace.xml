@@ -4,14 +4,11 @@
     <list default="true" id="734bab5d-6244-44c4-a0b0-0149ba106901" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Finally.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/ListQuestion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListQuestion.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/random.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/other/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +72,10 @@
       <workItem from="1582618844139" duration="9221000" />
       <workItem from="1582629023069" duration="1298000" />
       <workItem from="1582635443242" duration="2702000" />
-      <workItem from="1582638607029" duration="797000" />
+      <workItem from="1582638607029" duration="3614000" />
+      <workItem from="1582652847412" duration="41000" />
+      <workItem from="1582702854499" duration="8351000" />
+      <workItem from="1582713434811" duration="11427000" />
     </task>
     <servers />
   </component>
@@ -83,15 +83,15 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="235" y="62" width="802" height="674" key="#ESLint" timestamp="1582635692411">
+    <state x="235" y="62" width="802" height="674" key="#ESLint" timestamp="1582640741217">
       <screen x="0" y="25" width="1280" height="751" />
     </state>
-    <state x="235" y="62" width="802" height="674" key="#ESLint/0.25.1280.751@0.25.1280.751" timestamp="1582635692411" />
-    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl" timestamp="1582629114462">
+    <state x="235" y="62" width="802" height="674" key="#ESLint/0.25.1280.751@0.25.1280.751" timestamp="1582640741217" />
+    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl" timestamp="1582711831654">
       <screen x="0" y="25" width="1280" height="751" />
     </state>
     <state x="423" y="158" width="426" height="484" key="FileChooserDialogImpl/0.25.1280.750@0.25.1280.750" timestamp="1582388347597" />
-    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl/0.25.1280.751@0.25.1280.751" timestamp="1582629114462" />
+    <state x="423" y="158" width="426" height="481" key="FileChooserDialogImpl/0.25.1280.751@0.25.1280.751" timestamp="1582711831654" />
     <state width="1259" height="156" key="GridCell.Tab.0.bottom" timestamp="1582210945011">
       <screen x="0" y="25" width="1280" height="750" />
     </state>
