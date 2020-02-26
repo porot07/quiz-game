@@ -7,7 +7,7 @@ const App = () => {
   const [answer, setAnswer] = useState('');
   const handleClick = (e) => {
     setAnswer(e.target.value);
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
   const [question, setQuestion] = useState(questions);
   const [currentQuestion, setCurrentQuestion] = useState(0);

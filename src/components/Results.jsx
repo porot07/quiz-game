@@ -1,19 +1,13 @@
-import React, { useState } from 'react';
-import App from './App';
+import React from 'react';
 
 const Results = ({ correctAnswers }) => {
-  const [reset, setResetState] = useState('result');
-  const handleSubmit = (e) => {
-  };
-
   return (
     <div className="results">
       <h1>{correctAnswers.right} - Правильно</h1>
       <h1>{correctAnswers.wrong} - Не правильно</h1>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={() => {}}>
         <button type="submit">Начать тест заново</button>
       </form>
-
     </div>
   );
 };

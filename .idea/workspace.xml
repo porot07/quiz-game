@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="734bab5d-6244-44c4-a0b0-0149ba106901" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/ListQuestion.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ListQuestion.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Results.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Results.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/questions.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/questions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/style.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +71,7 @@
       <workItem from="1582638607029" duration="3614000" />
       <workItem from="1582652847412" duration="41000" />
       <workItem from="1582702854499" duration="8351000" />
-      <workItem from="1582713434811" duration="11427000" />
+      <workItem from="1582713434811" duration="11767000" />
     </task>
     <servers />
   </component>
