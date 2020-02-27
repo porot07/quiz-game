@@ -17,7 +17,7 @@ const ListQuestion = ({
       {
         question.answers.map((answer, id) => (
           <p className={`variant-${id}`} key={uniqueId()}>
-            <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.correctValue} required onClick={handleClick} />
+            <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrectly} required onClick={handleClick} />
             <label htmlFor={`variant-${id}`}><span>{answer.value}</span></label>
           </p>
           // <>

@@ -5,19 +5,19 @@ export default [
     answers: [
       {
         value: '4',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: '5',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: '2',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: '8',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -27,19 +27,19 @@ export default [
     answers: [
       {
         value: 'Сахара',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Кызылкум',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Калахари',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Гоби',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -49,19 +49,19 @@ export default [
     answers: [
       {
         value: 'Английский – от дождя, китайский – от солнца',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Английский - от солнца, китайский - от дождя',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Оба зонта от дождя',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Оба зонта от солнца',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -71,19 +71,19 @@ export default [
     answers: [
       {
         value: 'Лассо',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Поводок',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Петля',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Игрушка',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -93,19 +93,19 @@ export default [
     answers: [
       {
         value: 'Малина',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Помидор',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Клубника',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Ежевика',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -115,19 +115,19 @@ export default [
     answers: [
       {
         value: 'Сова',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Ворон',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Воробей',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Петух',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -137,19 +137,19 @@ export default [
     answers: [
       {
         value: 'Штатив',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Селфи-палка',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Палка',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Акссесуар',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -159,19 +159,19 @@ export default [
     answers: [
       {
         value: 'Волк',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Шакал',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Лиса',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Динозавр',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -181,19 +181,19 @@ export default [
     answers: [
       {
         value: 'Баюн',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Чеширский',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Домашний',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Уличный',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
@@ -203,19 +203,19 @@ export default [
     answers: [
       {
         value: 'Косяк',
-        correctValue: 'correct',
+        isCorrectly: true,
       },
       {
         value: 'Рой',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Орава',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
       {
         value: 'Звено',
-        correctValue: 'incorrect',
+        isCorrectly: false,
       },
     ],
   },
