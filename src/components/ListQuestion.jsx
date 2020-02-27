@@ -1,5 +1,4 @@
 import React from 'react';
-import { uniqueId } from 'lodash';
 
 const ListQuestion = ({
   question, handleSubmit, handleClick,
@@ -16,7 +15,7 @@ const ListQuestion = ({
     <form className="radio-container" onSubmit={handleSubmit}>
       {
         question.answers.map((answer, id) => (
-          <p className={`variant-${id}`} key={uniqueId()}>
+          <p className={`variant-${id}`} key={question.id}>
             <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrectly} required onClick={handleClick} />
             <label htmlFor={`variant-${id}`}><span>{answer.value}</span></label>
           </p>
