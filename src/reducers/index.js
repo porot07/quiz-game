@@ -26,8 +26,8 @@ const answers = handleActions({
   },
 }, {
   answer: '',
-  incrementRightAnswer: 0,
-  decrementWrongAnswer: 0,
+  incRightAnswer: 0,
+  decWrongAnswer: 0,
 });
 
 const questions = handleActions({

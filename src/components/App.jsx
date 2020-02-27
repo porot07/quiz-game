@@ -6,7 +6,7 @@ import * as actions from '../actions';
 
 const App = ({
   answer, rightAnswer, wrongAnswer,
-  numberCurrentQuestion, questionArr,
+  numCurrentQuestion, questionArr,
 }) => {
   const dispatch = useDispatch();
   const handleClick = (e) => {
@@ -34,9 +34,9 @@ const App = ({
 
 const mapStateToProps = (state) => ({
   answer: state.answers.answer,
-  rightAnswer: state.answers.incrementRightAnswer,
-  wrongAnswer: state.answers.decrementWrongAnswer,
-  numberCurrentQuestion: state.questions.currentQuestion,
+  rightAnswer: state.answers.incRightAnswer,
+  wrongAnswer: state.answers.decWrongAnswer,
+  numCurrentQuestion: state.questions.currentQuestion,
   questionArr: state.questions.questionArr,
 });
 
