@@ -1,47 +1,43 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useDispatch, connect } from 'react-redux';
 import ListQuestion from './ListQuestion';
-import questions from '../questions';
 import Results from './Results';
+import * as actions from '../actions';
 
-const App = () => {
-  const [answer, setAnswer] = useState(Boolean());
+const App = ({
+  answer, rightAnswer, wrongAnswer,
+  numberCurrentQuestion, questionArr,
+}) => {
+  const dispatch = useDispatch();
   const handleClick = (e) => {
-    setAnswer(e.target.value);
+    dispatch(actions.answerAdd({ answer: e.target.value }));
   };
-  const [question, setQuestion] = useState(questions);
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [stat, setStat] = useState({ right: 0, wrong: 0 });
-  console.log(typeof answer);
   const handleSubmit = (e) => {
     e.preventDefault();
     if (answer === 'true') {
-      setStat({ ...stat, right: stat.right + 1 });
+      dispatch(actions.incrementRightAnswer(rightAnswer));
     } else {
-      setStat({ ...stat, wrong: stat.wrong + 1 });
+      dispatch(actions.decrementWrongAnswer(wrongAnswer));
     }
-    setCurrentQuestion(currentQuestion + 1);
+    dispatch(actions.questionIncrementCurrent(numCurrentQuestion));
   };
   return (
     <div className="container">
       {
-        question[currentQuestion]
-          ? (
-            <ListQuestion
-              question={question[currentQuestion]}
-              handleSubmit={handleSubmit}
-              handleClick={handleClick}
-            />
-          )
-          : (
-            <Results
-              correctAnswers={stat}
-              reset={setStat}
-              values={stat}
-            />
-          )
+        questionArr[numCurrentQuestion]
+          ? <ListQuestion handleSubmit={handleSubmit} handleClick={handleClick} />
+          : <Results />
       }
     </div>
   );
 };
 
-export default App;
+const mapStateToProps = (state) => ({
+  answer: state.answers.answer,
+  rightAnswer: state.answers.incrementRightAnswer,
+  wrongAnswer: state.answers.decrementWrongAnswer,
+  numberCurrentQuestion: state.questions.currentQuestion,
+  questionArr: state.questions.questionArr,
+});
+
+export default connect(mapStateToProps)(App);

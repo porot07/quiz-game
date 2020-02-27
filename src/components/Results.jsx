@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
-const Results = ({ correctAnswers }) => {
+const Results = ({ right, wrong }) => {
+  console.log(right, wrong);
   return (
     <div className="results">
-      <h1>{correctAnswers.right} - Правильно</h1>
-      <h1>{correctAnswers.wrong} - Не правильно</h1>
+      <h1>{ right } - Правильно</h1>
+      <h1>{ wrong } - Не правильно</h1>
       <form onSubmit={() => {}}>
         <button type="submit">Начать тест заново</button>
       </form>
@@ -12,4 +14,9 @@ const Results = ({ correctAnswers }) => {
   );
 };
 
-export default Results;
+const mapStateToProps = (state) => ({
+  right: state.answers.incRightAnswer,
+  wrong: state.answers.decWrongAnswer,
+});
+
+export default connect(mapStateToProps)(Results);

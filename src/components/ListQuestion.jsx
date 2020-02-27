@@ -1,48 +1,40 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 const ListQuestion = ({
-  question, handleSubmit, handleClick,
-}) => (
-  <div className="list-container">
-    <header>
-      <p>
-        Вопрос №
-        {question.id}
-      </p>
-      <p>Узнай на что ты способен!</p>
-    </header>
-    <p className="question"><span>{question.question}</span></p>
-    <form className="radio-container" onSubmit={handleSubmit}>
-      {
-        question.answers.map((answer, id) => (
-          <p className={`variant-${id}`} key={question.id}>
-            <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrectly} required onClick={handleClick} />
-            <label htmlFor={`variant-${id}`}><span>{answer.value}</span></label>
-          </p>
-          // <>
-          //   <p className="variant-A">
-          //     <input id="variant-A" type="radio" name="check-answer" value={answer.correctValue} required onClick={handleClick} />
-          //     <label htmlFor="variant-A"><span>{answer.first}</span></label>
-          //   </p>
-          //   <p className="variant-B">
-          //     <input id="variant-B" type="radio" name="check-answer" value={answer.correctValue} required onClick={handleClick} />
-          //     <label htmlFor="variant-B"><span>{answer.second}</span></label>
-          //   </p>
-          //   <p className="variant-C">
-          //     <input id="variant-C" type="radio" name="check-answer" value={answer.correctValue} required onClick={handleClick} />
-          //     <label htmlFor="variant-C"><span>{answer.third}</span></label>
-          //   </p>
-          //   <p className="variant-D">
-          //     <input id="variant-D" type="radio" name="check-answer" value={answer.correctValue} required onClick={handleClick} />
-          //     <label htmlFor="variant-D"><span>{answer.fourth}</span></label>
-          //   </p>
-          // </>
-        ))
-      }
-      <button type="submit">Далее</button>
-    </form>
+  questionsArr, handleSubmit, handleClick,
+  numberCurrentQuestion,
+}) => {
+  const questions = questionsArr[numberCurrentQuestion];
+  return (
+    <div className="list-container">
+      <header>
+        <p>
+          Вопрос №
+          {questions.id}
+        </p>
+        <p>Узнай на что ты способен!</p>
+      </header>
+      <p className="question"><span>{questions.question}</span></p>
+      <form className="radio-container" onSubmit={handleSubmit}>
+        {
+          questions.answers.map((answer, id) => (
+            <p className={`variant-${id}`} key={id}>
+              {/* Здесь надо как-то использовать ID от самих вопросов... Пока надо подумать как... Поставил заглушкой от ID массивов (знаю что не совсем так правильно делать) */}
+              <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrectly} required onClick={handleClick} />
+              <label htmlFor={`variant-${id}`}><span>{answer.value}</span></label>
+            </p>
+          ))
+        }
+        <button type="submit">Далее</button>
+      </form>
+    </div>
+  );
+};
 
-  </div>
-);
+const mapStateToProps = (state) => ({
+  numberCurrentQuestion: state.questions.currentQuestion,
+  questionsArr: state.questions.questionArr,
+});
 
-export default ListQuestion;
+export default connect(mapStateToProps)(ListQuestion);
