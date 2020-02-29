@@ -1,6 +1,23 @@
+import axios from 'axios';
 import { createAction } from 'redux-actions';
 
-export const answerAdd = createAction('ADD_ANSWER');
-export const incrementRightAnswer = createAction('INCREMENT_RIGHT_ANSWER');
-export const decrementWrongAnswer = createAction('DECREMENT_WRONG_ANSWER');
-export const questionIncrementCurrent = createAction('INCREMENT_QUESTION_CURRENT');
+import routes from './routes';
+
+export const addAnswer = createAction('ANSWER_ADD');
+export const incrementRightAnswer = createAction('RIGHT_ANSWER_INCREMENT');
+export const decrementWrongAnswer = createAction('WRONG_ANSWER_DECREMENT');
+export const incrementQuestionCurrent = createAction('QUESTION_CURRENT_INCREMENT');
+
+export const getQuestionsRequest = createAction('GET_QUESTION_REQUEST');
+export const getQuestionsSuccess = createAction('GET_QUESTION_SUCCESS');
+export const getQuestionsFailure = createAction('GET_QUESTION_FAILURE');
+
+export const getQuestions = () => async (dispatch) => {
+  dispatch(getQuestionsRequest());
+  try {
+    const response = await axios.get(routes.questions());
+    dispatch(getQuestionsSuccess(response));
+  } catch (e) {
+    dispatch(getQuestionsFailure());
+  }
+};

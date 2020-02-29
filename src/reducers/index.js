@@ -1,12 +1,12 @@
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
 
-import questionsArray from "../questions";
+import questions from '../questions';
 
 import * as actions from '../actions';
 
 const answers = handleActions({
-  [actions.answerAdd](state, { payload: { answer } }) {
+  [actions.addAnswer](state, { payload: { answer } }) {
     return {
       ...state,
       answer,
@@ -30,8 +30,8 @@ const answers = handleActions({
   decWrongAnswer: 0,
 });
 
-const questions = handleActions({
-  [actions.questionIncrementCurrent](state, { payload }) {
+const questionsReducer = handleActions({
+  [actions.incrementQuestionCurrent](state, { payload }) {
     return {
       ...state,
       currentQuestion: payload + 1,
@@ -39,11 +39,26 @@ const questions = handleActions({
   },
 }, {
   currentQuestion: 0,
-  questionArr: [...questionsArray],
+  questions: [...questions],
+});
+
+const getQuestionReducer = handleActions({
+  [actions.getQuestionsRequest](state) {
+    return state;
+  },
+  [actions.getQuestionsSuccess](state, { payload: { data: { results } } }) {
+    return {
+      ...state,
+      questions: results,
+    };
+  },
+}, {
+  questions: [],
 });
 
 
 export default combineReducers({
   answers,
-  questions,
+  questionsReducer,
+  getQuestionReducer,
 });

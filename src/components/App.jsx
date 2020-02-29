@@ -1,16 +1,24 @@
-import React from 'react';
-import { useDispatch, connect } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+
 import ListQuestion from './ListQuestion';
 import Results from './Results';
 import * as actions from '../actions';
 
-const App = ({
-  answer, rightAnswer, wrongAnswer,
-  numCurrentQuestion, questionArr,
-}) => {
+const App = () => {
   const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(actions.getQuestions());
+  }, {});
+  const answer = useSelector((state) => state.answers.answer);
+  const rightAnswer = useSelector((state) => state.answers.incRightAnswer);
+  const wrongAnswer = useSelector((state) => state.answers.decWrongAnswer);
+  const numCurrentQuestion = useSelector((state) => state.questionsReducer.currentQuestion);
+  const questionArr = useSelector((state) => state.questionsReducer.questions);
+  const asyncGetQuestion = useSelector((state) => state.getQuestionReducer.questions);
+  console.log(asyncGetQuestion);
   const handleClick = (e) => {
-    dispatch(actions.answerAdd({ answer: e.target.value }));
+    dispatch(actions.addAnswer({ answer: e.target.value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +27,7 @@ const App = ({
     } else {
       dispatch(actions.decrementWrongAnswer(wrongAnswer));
     }
-    dispatch(actions.questionIncrementCurrent(numCurrentQuestion));
+    dispatch(actions.incrementQuestionCurrent(numCurrentQuestion));
   };
   return (
     <div className="container">
@@ -32,12 +40,4 @@ const App = ({
   );
 };
 
-const mapStateToProps = (state) => ({
-  answer: state.answers.answer,
-  rightAnswer: state.answers.incRightAnswer,
-  wrongAnswer: state.answers.decWrongAnswer,
-  numCurrentQuestion: state.questions.currentQuestion,
-  questionArr: state.questions.questionArr,
-});
-
-export default connect(mapStateToProps)(App);
+export default App;
