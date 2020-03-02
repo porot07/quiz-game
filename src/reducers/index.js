@@ -33,10 +33,10 @@ const questions = handleActions({
   [actions.getQuestionsRequest](state) {
     return state;
   },
-  [actions.getQuestionsSuccess](state, { payload: { data: { results } } }) {
+  [actions.getQuestionsSuccess](state, { payload }) {
     return {
       ...state,
-      questions: results.map((object) => ({
+      questions: payload.map((object) => ({
         id: uniqueId(),
         title: object.question,
         answers: shuffle([object.correct_answer, ...object.incorrect_answers]).map((answer) => ({
