@@ -1,32 +1,32 @@
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
-import { shuffle } from 'lodash';
+import { uniqueId, shuffle } from 'lodash';
 
 import * as actions from '../actions';
 
 const answers = handleActions({
-  [actions.addAnswer](state, { payload: { answer } }) {
+  [actions.getValueAnswer](state, { payload: { answer } }) {
     return {
       ...state,
-      answerSelect: answer,
+      answerValue: answer,
     };
   },
   [actions.incrementRightAnswer](state, { payload }) {
     return {
       ...state,
-      incRightAnswer: payload + 1,
+      rightAnswer: payload + 1,
     };
   },
   [actions.incrementWrongAnswer](state, { payload }) {
     return {
       ...state,
-      decWrongAnswer: payload + 1,
+      wrongAnswer: payload + 1,
     };
   },
 }, {
-  answerSelect: '',
-  incRightAnswer: 0,
-  decWrongAnswer: 0,
+  answerValue: '',
+  rightAnswer: 0,
+  wrongAnswer: 0,
 });
 
 const questions = handleActions({
@@ -37,6 +37,7 @@ const questions = handleActions({
     return {
       ...state,
       questions: results.map((object) => ({
+        id: uniqueId(),
         title: object.question,
         answers: shuffle([object.correct_answer, ...object.incorrect_answers]).map((answer) => ({
           title: answer,

@@ -3,7 +3,7 @@ import { createAction } from 'redux-actions';
 
 import routes from './routes';
 
-export const addAnswer = createAction('ANSWER_ADD');
+export const getValueAnswer = createAction('ANSWER_ADD');
 export const incrementRightAnswer = createAction('RIGHT_ANSWER_INCREMENT');
 export const incrementWrongAnswer = createAction('WRONG_ANSWER_DECREMENT');
 

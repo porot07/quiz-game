@@ -7,20 +7,20 @@ import * as actions from '../actions';
 
 const App = () => {
   const dispatch = useDispatch();
-  const answerSelect = useSelector((state) => state.answers.answerSelect);
-  const rightAnswer = useSelector((state) => state.answers.incRightAnswer);
-  const wrongAnswer = useSelector((state) => state.answers.decWrongAnswer);
+  const selectedAnswerValue = useSelector((state) => state.answers.answerValue);
+  const rightCounterAnswer = useSelector((state) => state.answers.rightAnswer);
+  const wrongCounterAnswer = useSelector((state) => state.answers.wrongAnswer);
   const numCurrentQuestion = useSelector((state) => state.questions.currentQuestion);
-  const asyncGetQuestion = useSelector((state) => state.questions.questions);
+  const questions = useSelector((state) => state.questions.questions);
   const handleClick = (e) => {
-    dispatch(actions.addAnswer({ answer: e.target.value }));
+    dispatch(actions.getValueAnswer({ answer: e.target.value }));
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (answerSelect === 'true') {
-      dispatch(actions.incrementRightAnswer(rightAnswer));
+    if (selectedAnswerValue === 'true') {
+      dispatch(actions.incrementRightAnswer(rightCounterAnswer));
     } else {
-      dispatch(actions.incrementWrongAnswer(wrongAnswer));
+      dispatch(actions.incrementWrongAnswer(wrongCounterAnswer));
     }
     dispatch(actions.incrementQuestionCurrent(numCurrentQuestion));
   };
@@ -30,7 +30,7 @@ const App = () => {
   return (
     <div className="container">
       {
-        asyncGetQuestion[numCurrentQuestion]
+        questions[numCurrentQuestion]
           ? <ListQuestion handleSubmit={handleSubmit} handleClick={handleClick} />
           : <Results />
       }

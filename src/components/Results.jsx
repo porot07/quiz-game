@@ -1,8 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import { useSelector } from 'react-redux';
 
-const Results = ({ right, wrong }) => {
-  console.log(right, wrong);
+const Results = () => {
+  const right = useSelector((state) => state.answers.rightAnswer);
+  const wrong = useSelector((state) => state.answers.wrongAnswer);
   return (
     <div className="results">
       <h1>{ right } - Правильно</h1>
@@ -14,9 +15,5 @@ const Results = ({ right, wrong }) => {
   );
 };
 
-const mapStateToProps = (state) => ({
-  right: state.answers.incRightAnswer,
-  wrong: state.answers.decWrongAnswer,
-});
 
-export default connect(mapStateToProps)(Results);
+export default Results;
