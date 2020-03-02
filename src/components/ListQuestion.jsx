@@ -4,11 +4,9 @@ import { useSelector } from 'react-redux';
 const ListQuestion = ({
   handleSubmit, handleClick,
 }) => {
-  const questionsArr = useSelector((state) => state.questionsReducer.questions);
-  const asyncQuestionArr = useSelector((state) => state.getQuestionReducer.questions);
-  const numberCurrentQuestion = useSelector((state) => state.questionsReducer.currentQuestion);
-  const questions = questionsArr[numberCurrentQuestion];
-
+  const asyncQuestions = useSelector((state) => state.questions.questions);
+  const numberCurrentQuestion = useSelector((state) => state.questions.currentQuestion);
+  const questions = asyncQuestions[numberCurrentQuestion];
   return (
     <div className="list-container">
       <header>
@@ -18,14 +16,13 @@ const ListQuestion = ({
         </p>
         <p>Узнай на что ты способен!</p>
       </header>
-      <p className="question"><span>{questions.question}</span></p>
+      <p className="question"><span>{questions.title}</span></p>
       <form className="radio-container" onSubmit={handleSubmit}>
         {
           questions.answers.map((answer, id) => (
-            <p className={`variant-${id}`} key={answer.value}>
-              {/* Здесь надо как-то использовать ID от самих вопросов... Пока надо подумать как... Поставил заглушкой от ID массивов (знаю что не совсем так правильно делать) */}
-              <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrectly} required onClick={handleClick} />
-              <label htmlFor={`variant-${id}`}><span>{answer.value}</span></label>
+            <p className={`variant-${id}`} key={answer.title}>
+              <input id={`variant-${id}`} type="radio" name="check-answer" value={answer.isCorrect} required onClick={handleClick} />
+              <label htmlFor={`variant-${id}`}><span>{answer.title}</span></label>
             </p>
           ))
         }

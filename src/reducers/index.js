@@ -1,7 +1,6 @@
 import { combineReducers } from 'redux';
 import { handleActions } from 'redux-actions';
-
-import questions from '../questions';
+import { shuffle } from 'lodash';
 
 import * as actions from '../actions';
 
@@ -9,7 +8,7 @@ const answers = handleActions({
   [actions.addAnswer](state, { payload: { answer } }) {
     return {
       ...state,
-      answer,
+      answerSelect: answer,
     };
   },
   [actions.incrementRightAnswer](state, { payload }) {
@@ -18,19 +17,34 @@ const answers = handleActions({
       incRightAnswer: payload + 1,
     };
   },
-  [actions.decrementWrongAnswer](state, { payload }) {
+  [actions.incrementWrongAnswer](state, { payload }) {
     return {
       ...state,
       decWrongAnswer: payload + 1,
     };
   },
 }, {
-  answer: '',
+  answerSelect: '',
   incRightAnswer: 0,
   decWrongAnswer: 0,
 });
 
-const questionsReducer = handleActions({
+const questions = handleActions({
+  [actions.getQuestionsRequest](state) {
+    return state;
+  },
+  [actions.getQuestionsSuccess](state, { payload: { data: { results } } }) {
+    return {
+      ...state,
+      questions: results.map((object) => ({
+        title: object.question,
+        answers: shuffle([object.correct_answer, ...object.incorrect_answers]).map((answer) => ({
+          title: answer,
+          isCorrect: answer === object.correct_answer ? 'true' : 'false',
+        })),
+      })),
+    };
+  },
   [actions.incrementQuestionCurrent](state, { payload }) {
     return {
       ...state,
@@ -38,27 +52,12 @@ const questionsReducer = handleActions({
     };
   },
 }, {
-  currentQuestion: 0,
-  questions: [...questions],
-});
-
-const getQuestionReducer = handleActions({
-  [actions.getQuestionsRequest](state) {
-    return state;
-  },
-  [actions.getQuestionsSuccess](state, { payload: { data: { results } } }) {
-    return {
-      ...state,
-      questions: results,
-    };
-  },
-}, {
   questions: [],
+  currentQuestion: 0,
 });
 
 
 export default combineReducers({
   answers,
-  questionsReducer,
-  getQuestionReducer,
+  questions,
 });
