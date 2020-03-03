@@ -41,7 +41,7 @@ const questions = handleActions({
         title: object.question,
         answers: shuffle([object.correct_answer, ...object.incorrect_answers]).map((answer) => ({
           title: answer,
-          isCorrect: answer === object.correct_answer ? 'true' : 'false',
+          isCorrect: answer === object.correct_answer,
         })),
       })),
     };
@@ -52,13 +52,53 @@ const questions = handleActions({
       currentQuestion: payload + 1,
     };
   },
+  [actions.setStateQuestions](state, { payload }) {
+    return {
+      ...state,
+      stateRender: payload,
+    };
+  },
 }, {
   questions: [],
+  stateRender: 'choose',
   currentQuestion: 0,
+});
+
+const queryList = handleActions({
+  [actions.userChooseAmount](state, { payload }) {
+    return {
+      ...state,
+      amount: payload,
+    };
+  },
+  [actions.userChooseCategory](state, { payload }) {
+    return {
+      ...state,
+      category: payload,
+    };
+  },
+  [actions.userChooseDifficult](state, { payload }) {
+    return {
+      ...state,
+      difficulty: payload,
+    };
+  },
+  [actions.userChooseType](state, { payload }) {
+    return {
+      ...state,
+      type: payload,
+    };
+  },
+}, {
+  amount: 10,
+  category: '',
+  difficulty: '',
+  type: '',
 });
 
 
 export default combineReducers({
   answers,
   questions,
+  queryList,
 });

@@ -7,6 +7,7 @@ const ListQuestion = ({
   const asyncQuestions = useSelector((state) => state.questions.questions);
   const numberCurrentQuestion = useSelector((state) => state.questions.currentQuestion);
   const questions = asyncQuestions[numberCurrentQuestion];
+  console.log(questions);
   return (
     <div className="list-container">
       <header>
