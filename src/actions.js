@@ -16,12 +16,11 @@ export const setStateQuestions = createAction('STATE_QUESTIONS_SET');
 
 export const getQuestions = (values) => async (dispatch) => {
   dispatch(getQuestionsRequest());
-  console.log(values);
   try {
     const response = await axios.get(routes.questions(), {
       params: values,
     });
-    dispatch(getQuestionsSuccess(response.data.results));
+    dispatch(getQuestionsSuccess(response.data));
   } catch (e) {
     dispatch(getQuestionsFailure());
   }

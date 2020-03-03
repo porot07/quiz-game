@@ -10,9 +10,10 @@ const Choose = () => {
   const difficulty = useSelector((state) => state.queryList.difficulty);
   const type = useSelector((state) => state.queryList.type);
   const values = useSelector((state) => state.queryList);
+  const loadingState = useSelector((state) => state.questions.UIState);
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(actions.setStateQuestions('result'));
+    dispatch(actions.setStateQuestions('question'));
     dispatch(actions.getQuestions(values));
   };
   const handleChangeSelectAmount = (e) => {
@@ -69,7 +70,7 @@ const Choose = () => {
           <option value="multiple">Multiple Choice</option>
           <option value="boolean">True / False</option>
         </select>
-        <button type="submit">Начать игру</button>
+        <button type="submit" disabled={loadingState === 'request'}>{loadingState === 'request' ? 'Подождите...' : 'Начать игру'}</button>
       </form>
     </div>
   );
