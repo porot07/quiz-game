@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
 
-import Error from './Error';
 
 const ListQuestion = ({
   handleSubmit, handleClick,
@@ -9,9 +8,6 @@ const ListQuestion = ({
   const asyncQuestions = useSelector((state) => state.questions.questions);
   const numberCurrentQuestion = useSelector((state) => state.questions.currentQuestion);
   const questions = asyncQuestions[numberCurrentQuestion];
-  // useEffect(() => setInterval(() => {
-  //   <Error />;
-  // }, 1000), []);
   return (
     <div className="list-container">
       <header>

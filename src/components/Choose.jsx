@@ -11,9 +11,19 @@ const Choose = () => {
   const type = useSelector((state) => state.queryList.type);
   const values = useSelector((state) => state.queryList);
   const loadingState = useSelector((state) => state.questions.UIState);
+  const responseCode = useSelector((state) => state.questions.responseCodeState);
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(actions.setStateQuestions('question'));
+    switch (responseCode) {
+      case 0:
+        dispatch(actions.setStateQuestions('question'));
+        break;
+      case 1:
+      case 2:
+      case 3:
+      case 4: dispatch(actions.setStateQuestions('error')); break;
+      default:
+    }
     dispatch(actions.getQuestions(values));
   };
   const handleChangeSelectAmount = (e) => {

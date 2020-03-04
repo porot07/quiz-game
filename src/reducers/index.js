@@ -37,7 +37,6 @@ const questions = handleActions({
     };
   },
   [actions.getQuestionsSuccess](state, { payload }) {
-    console.log(payload);
     return {
       ...state,
       responseCodeState: payload.response_code,
@@ -50,6 +49,12 @@ const questions = handleActions({
           isCorrect: answer === object.correct_answer ? 'true' : 'false',
         })),
       })),
+    };
+  },
+  [actions.getQuestionsFailure](state) {
+    return {
+      ...state,
+      UIState: 'failure',
     };
   },
   [actions.incrementQuestionCurrent](state, { payload }) {
