@@ -31,19 +31,30 @@ const answers = handleActions({
 
 const questions = handleActions({
   [actions.getQuestionsRequest](state) {
-    return state;
+    return {
+      ...state,
+      UIState: 'request',
+    };
   },
   [actions.getQuestionsSuccess](state, { payload }) {
     return {
       ...state,
-      questions: payload.map((object) => ({
+      responseCodeState: payload.response_code,
+      UIState: 'success',
+      questions: payload.results.map((object) => ({
         id: uniqueId(),
         title: object.question,
         answers: shuffle([object.correct_answer, ...object.incorrect_answers]).map((answer) => ({
           title: answer,
-          isCorrect: answer === object.correct_answer,
+          isCorrect: answer === object.correct_answer ? 'true' : 'false',
         })),
       })),
+    };
+  },
+  [actions.getQuestionsFailure](state) {
+    return {
+      ...state,
+      UIState: 'failure',
     };
   },
   [actions.incrementQuestionCurrent](state, { payload }) {
@@ -60,6 +71,7 @@ const questions = handleActions({
   },
 }, {
   questions: [],
+  UIState: '',
   stateRender: 'choose',
   currentQuestion: 0,
 });

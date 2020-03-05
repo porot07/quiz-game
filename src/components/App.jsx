@@ -14,6 +14,8 @@ const App = () => {
   const numCurrentQuestion = useSelector((state) => state.questions.currentQuestion);
   const questions = useSelector((state) => state.questions.questions);
   const stateRender = useSelector((state) => state.questions.stateRender);
+  const loadingState = useSelector((state) => state.questions.UIState);
+  const dataError = useSelector((state) => state.questions.responseCodeState);
   const handleClick = (e) => {
     dispatch(actions.getValueAnswer({ answer: e.target.value }));
   };
@@ -25,21 +27,40 @@ const App = () => {
       dispatch(actions.incrementWrongAnswer(wrongCounterAnswer));
     }
     dispatch(actions.incrementQuestionCurrent(numCurrentQuestion));
+    if (numCurrentQuestion === (questions.length - 1)) {
+      dispatch(actions.setStateQuestions('result'));
+    }
   };
   console.log(stateRender);
-  const renderComponents = () => {
-    if (stateRender === 'choose') return <Choose />;
-    return <Results />;
+  const renderComponents = (stateUI, loadState, dataErr) => {
+    const processingError = (errorNum) => {
+      switch (errorNum) {
+        case 1:
+          return <h1>Обнови страницу, выбрери другие значения</h1>;
+        case 2:
+          return <h1>Перед началом игры, введи правильные аргументы (Например, amount = five)</h1>;
+        case 3:
+          return <h1>Получи токен, без него никак!</h1>;
+        case 4:
+          return <h1>Token Empty Session - сбрось полученный токен</h1>;
+        default:
+          return <h1>Все хорошо, ПРИЯТНОЙ ИГРЫ USERNAME!</h1>;
+      }
+    };
+
+    switch (stateUI) {
+      case 'question': return loadState === 'success' ? <ListQuestion handleSubmit={handleSubmit} handleClick={handleClick} /> : <div className="message-error"><h1>Идёт загрузка подождите немного...</h1></div>;
+      case 'error': return <div className="message-error">{processingError(dataErr)}</div>;
+      case 'result': return <Results />;
+      default:
+    }
   };
   return (
     <div className="container">
-
       {
-        questions[numCurrentQuestion]
-          ? <ListQuestion handleSubmit={handleSubmit} handleClick={handleClick} />
-          : renderComponents()
-        //   ? <ListQuestion handleSubmit={handleSubmit} handleClick={handleClick} />
-        //   : <div className=""><Choose /></div>
+        stateRender === 'choose'
+          ? <Choose />
+          : renderComponents(stateRender, loadingState, dataError)
       }
     </div>
   );
