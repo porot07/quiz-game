@@ -61,6 +61,18 @@ export const categories = [
     name: 'Entertainment: Board Games',
   },
   {
+    value: '31',
+    name: 'Entertainment: Japanese Anime &amp; Manga',
+  },
+  {
+    value: '32',
+    name: 'Entertainment: Cartoon &amp; Animations',
+  },
+  {
+    value: '29',
+    name: 'Entertainment: Comics',
+  },
+  {
     value: '17',
     name: 'Science &amp; Nature',
   },
@@ -71,6 +83,10 @@ export const categories = [
   {
     value: '19',
     name: 'Science: Mathematics',
+  },
+  {
+    value: '30',
+    name: 'Science: Gadgets',
   },
   {
     value: '20',
@@ -107,22 +123,6 @@ export const categories = [
   {
     value: '28',
     name: 'Vehicles',
-  },
-  {
-    value: '29',
-    name: 'Entertainment: Comics',
-  },
-  {
-    value: '30',
-    name: 'Science: Gadgets',
-  },
-  {
-    value: '31',
-    name: 'Entertainment: Japanese Anime &amp; Manga',
-  },
-  {
-    value: '32',
-    name: 'Entertainment: Cartoon &amp; Animations',
   },
 ];
 
