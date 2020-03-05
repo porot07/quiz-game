@@ -20,6 +20,16 @@ export const getQuestions = (values) => async (dispatch) => {
     const response = await axios.get(routes.questions(), {
       params: values,
     });
+    switch (response.data.response_code) {
+      case 0:
+        dispatch(setStateQuestions('question'));
+        break;
+      case 1:
+      case 2:
+      case 3:
+      case 4: dispatch(setStateQuestions('error')); break;
+      default:
+    }
     dispatch(getQuestionsSuccess(response.data));
   } catch (e) {
     dispatch(getQuestionsFailure());

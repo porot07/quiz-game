@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import ListQuestion from './ListQuestion';
 import Results from './Results';
 import Choose from './Choose';
-import Error from './Error';
 import * as actions from '../actions';
 
 const App = () => {
